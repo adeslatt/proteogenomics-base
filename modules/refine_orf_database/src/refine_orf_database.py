@@ -115,7 +115,7 @@ def main():
     parser.add_argument('--name', action='store', dest='name', help='sample name')
     parser.add_argument('-io', '--orfs',action='store', dest= 'orfs',help='ORF coordinate input file location')
     parser.add_argument('-if', '--pb_fasta', action = 'store', dest='pb_fasta', help='PacBio fasta sequence input file location')
-    parser.add_argument('-cut', '--coding_score_cutoff', dest = 'cutoff', type = float, default = 0.0, help='CPAT coding score cutoff. remove all below')
+    parser.add_argument('-cut', '--coding_score_cutoff', dest = 'cutoff', type = float, default = 0.364, help='CPAT coding score cutoff. remove all below')
     results = parser.parse_args()
     name = results.name
     logging.info('Reading Fasta File...')
