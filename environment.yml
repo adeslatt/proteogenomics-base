@@ -1,12 +1,27 @@
+# You can use this file to create a conda environment for this pipeline:
 #   conda env create -f environment.yml
-name: docker_image_name
+name: proteogenomics-base
 channels:
   - conda-forge
   - bioconda
   - defaults
 dependencies:
-  # make the environment that works to support your project
-  # Note - not using Biopython, but may in future version (to read in fasta)
+  # General utils
   - python=3.7.3
+  - markdown=3.1.1
+  - pymdown-extensions=6.0
+  - pygments=2.5.2
+  - multiqc=1.7
   - biopython
+  - numpy
   - pandas
+  - gtfparse
+  - xlsxwriter
+  
+
+  - bioconda:blast
+  - bioconda:star
+  - bioconda:bedtools
+  - bioconda:ucsc-gtftogenepred
+  - bioconda:ucsc-genepredtobed
+  - bioconda:cdna_cupcake 
